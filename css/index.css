@@ -108,11 +108,14 @@ main img{
     background-color: #0A0A24;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    opacity: 1.0;
+    
     
 }
 .lottie div:hover{
     border: 1px solid #6CCBD7;
-    opacity: 3;
+    opacity: 0.5;
 }
 .lottie p{
     font-size: 16px;
@@ -144,6 +147,18 @@ main img{
 }
 .about .text h1{
     font-size: 40px;
+}
+.about .flexy{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lott{
+    width: 80%;
+    
+}
+.tex{
+    width: 60%;
 }
 /*  */
 .tes, .about{
@@ -177,6 +192,47 @@ main img{
     transform: scale(1.5);
     transition: 1s all ease-in-out;
 }
+
+footer{
+    background: #0A0A24;
+    color: white;
+}
+footer h3{
+    margin: auto;
+    padding: 20px 0;
+    width: 50%;
+    color: white;
+}
+li{
+    list-style: none;
+    padding: 10px 0;
+    
+}
+li a{
+    color: white;
+}
+footer main{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+footer .icon-tab{
+    margin: 20px 0px 10px 0;
+    border: 1px solid #737373;;
+    padding: 10px;
+}
+footer .icon-tab i{
+    color: #737373;
+    font-size: 24px;
+}
+footer .icon-tab select{
+    color: #737373;
+    font-size: 24px;
+}
+
 @media only screen and (max-width: 700px){
     .wrap h1{
         font-weight: 900;
