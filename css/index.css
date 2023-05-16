@@ -1,23 +1,29 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 body{
-    background: #E1E7EB;
-}
+    font-family: 'Poppins', sans-serif;
+   }
 .wrapper{
-    width: 90%;
-    margin: 20px  auto;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(26,29,73,1) 53%, rgba(26,104,106,1) 100%);
+    color: white;
 }
 nav{
+    background-color: #0A0A24;
     display: flex;
     justify-content: space-between;
+    height: 90px;
+    padding: 20px 40px;
 }
 nav h1{
     color: red;
     font-weight: 900;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 50px;
 }
 .btn{
@@ -25,9 +31,9 @@ nav h1{
     gap: 19px;
     
 }
-.btn button{
-    border: 1px solid #00A7CA;
-    background-color: #00A7CA;
+.btn .but{
+    border: 1px solid #615AB4;
+    background-color: #615AB4;
     height: 40px;
     width: 90px;
     border-radius: 15px;
@@ -37,25 +43,34 @@ nav h1{
 }
 .btn button:hover{
     background: none;
-    color: #00A7CA;
+    color: #615AB4;
+}
+.buto{
+    background: none;
+    color: #bcb9e3;
+    height: 40px;
+    width: 90px;
+    border-radius: 15px;
+    border: 1px solid #615AB4;
 }
 
 .wrap{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.wrap h1{
-    font-size: 80px;
-    color: #4A6379;
-    font-weight: 700;
-}
-.wrap main{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-top: 70px;
     width: 90%;
     margin: auto;
+    min-height: 500px;
+    padding-bottom: 40px;
+}
+.wrap h1{
+    font-size: 58px;
+    font-weight: 700;
+}
+.wrap p{
+    font-size: 22px;
+    line-height: 35px;
 }
 main img{
     height: 50px;
@@ -77,33 +92,48 @@ main img{
     color: #00A7CA;
 }
 
-.lottie{
+.lottie {
     width: 60%;
-    float: right;
-    height: 400px;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 120px 120px 120px;
+    gap: 20px;
 }
-.ball{
-    height: 30px ;
-    width: 30px;
-    border-radius: 50%;
+.lottie div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #0A0A24;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+.lottie div:hover{
+    border: 1px solid #6CCBD7;
+    opacity: 3;
+}
+.lottie p{
+    font-size: 16px;
+    width: 80%;
+    line-height: 25px;
+}
+.lottie i{
+    font-size: 26px;
+}
+.blue{
+    border: 1px solid #6CCBD7;
+}
+.blue i{
+    color: #6CCBD7;
 }
 .red{
-    background-color: #EF6159;
+    border: 1px solid red;
 }
-.yellow{
-    background-color: #FBBF3F;
+.red i{
+    color: red;
 }
-.green{
-    background-color: #59CA43;
-}
-.white{
-    height: 30px ;
-    width: 30px;
-    background-color: white;
-    padding: 5px;
-    text-align: center; 
-}
-
 
 @media only screen and (max-width: 700px){
     .wrap h1{
