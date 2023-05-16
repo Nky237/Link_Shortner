@@ -136,7 +136,17 @@ main img{
 }
 
 /*  */
-.tes{
+.about .text{
+    text-align: center;
+    line-height: 40px;
+    width: 70%;
+    margin: auto;
+}
+.about .text h1{
+    font-size: 40px;
+}
+/*  */
+.tes, .about{
     padding: 50px 40px;
 }
 .tes h1{
