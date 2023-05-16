@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+select {
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    border: none;
+  }
+
+
+.container{
+    background: #E1E7EB;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 700px;
+}
+.logo{
+    padding: 20px;
+}
+form{
+    width: 26%;
+    margin:  20px auto 50px auto;
+    min-height: 550px;
+    padding-top: 60px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+.form-cont{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+    color: white;
+}.form-cont h2{
+    color: white;
+}
+.form-cont input{
+    height: 50px;
+    width: 100%;
+    background-color: #333333;
+    margin: 20px 0;
+    padding: 0 20px;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 21px;
+    border: none;
+}
+.form-cont button{
+    height: 50px !important;
+    width: 100%;
+    background-color: #00A7CA !important ;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+    border: none;
+
+}
+.form-cont .form-cont a{
+    color: #fff;
+}
+.form-cont .forget{
+    display: flex;
+    justify-content: space-between;
+}
+.forget a, .icon a{
+    color: white;
+}
+.form-cont .icon{
+    display: flex;
+}
+#err{
+    text-align: center;
+    color: red;
+    font-style: italic;
+}
+
+footer{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    color: white;
+}
+footer h3{
+    margin: auto;
+    padding: 20px 0;
+    width: 50%;
+    color: white;
+}
+li{
+    list-style: none;
+    padding: 10px 0;
+    
+}
+li a{
+    color: white;
+}
+footer main{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+footer .icon-tab{
+    margin: 20px 0px 10px 0;
+    border: 1px solid #737373;;
+    padding: 10px;
+}
+footer .icon-tab i{
+    color: #737373;
+    font-size: 24px;
+}
+footer .icon-tab select{
+    color: #737373;
+    font-size: 24px;
+}
+@media only screen and (max-width: 600px){
+    form{
+        width: 92%;
+        margin-top: 10px;
+    }
+    .logo img{
+        width: 120px;
+        height: 40px;
+    }
+    .form-cont{
+        width: 90%;
+    }
+    footer h3{
+        width: 100%;
+        text-align: center;
+    }
+    footer main{
+        flex-direction: column;
+        width: 60%;
+    }
+    footer .icon-tab i{
+        color: #737373;
+        font-size: 17px;
+    }
+    footer .icon-tab select{
+        color: #737373;
+        font-size: 17px;
+    }
+}

@@ -103,6 +103,8 @@ main img{
     padding: 5px;
     text-align: center; 
 }
+
+
 @media only screen and (max-width: 700px){
     .wrap h1{
         font-weight: 900;
