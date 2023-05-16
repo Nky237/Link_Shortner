@@ -135,6 +135,38 @@ main img{
     color: red;
 }
 
+/*  */
+.tes{
+    padding: 50px 40px;
+}
+.tes h1{
+    text-align: center;
+    font-size: 40px;
+}
+.swiper{
+    margin-top: 50px;
+}
+.swiper-slide{
+    height: 200px !important;
+    margin-left: 20px;
+    padding: 0 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+}
+/*  */
+.log h1{
+    text-align: center;
+    padding-top: 40px;
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+.logo img:hover{
+    transform: scale(1.5);
+    transition: 1s all ease-in-out;
+}
 @media only screen and (max-width: 700px){
     .wrap h1{
         font-weight: 900;
