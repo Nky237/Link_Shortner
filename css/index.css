@@ -5,6 +5,12 @@
     padding: 0;
     margin: 0;
 }
+a{
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+}
 body{
     font-family: 'Poppins', sans-serif;
    }
@@ -41,9 +47,16 @@ nav h1{
     color: white;
     transition: 1s all ease-in;
 }
+.btn .but a{
+    color: white;
+    text-decoration: none;   
+}
 .btn button:hover{
     background: none;
     color: #615AB4;
+}
+.btn .but a:hover{
+    color: #615AB4;   
 }
 .buto{
     background: none;
@@ -83,13 +96,19 @@ main img{
     width: 200px;
     border-radius: 25px;
     padding: 5px 10px;
-    color: white;
+    
     transition: 1s all ease-in;
     margin-top: 50px;
 }
+.wrap button a{
+    color: white;
+}
+.wrap button a:hover{
+    color: #00A7CA;
+}
 .wrap button:hover{
     background: none;
-    color: #00A7CA;
+   
 }
 
 .lottie {
