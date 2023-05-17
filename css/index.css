@@ -25,6 +25,7 @@ nav{
     justify-content: space-between;
     height: 90px;
     padding: 20px 40px;
+    position: sticky;
 }
 nav h1{
     color: red;
@@ -74,7 +75,7 @@ nav h1{
     margin-top: 70px;
     width: 90%;
     margin: auto;
-    min-height: 500px;
+    min-height: 530px;
     padding-bottom: 40px;
 }
 .wrap h1{
@@ -178,6 +179,11 @@ main img{
 }
 .tex{
     width: 60%;
+}
+#loadMoreBtn{
+    color: #1A686A;
+    cursor: pointer;
+    font-weight: 600;
 }
 /*  */
 .tes, .about{
