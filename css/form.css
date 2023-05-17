@@ -7,30 +7,26 @@
 a{
     text-decoration: none;
 }
-select {
-    background: rgba(0, 0, 0, 0.3);
-    color: #fff;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-    border: none;
-  }
+
 
 
 .container{
-    background: #E1E7EB;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(26,29,73,1) 53%, rgba(26,104,106,1) 100%);
+    
     min-height: 700px;
 }
-.logo{
-    padding: 20px;
+h1{
+    padding-top: 20px;
+    color: white;
+    text-align: center;
 }
 form{
     width: 26%;
     margin:  20px auto 50px auto;
     min-height: 550px;
     padding-top: 60px;
+    border-radius: 15px;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 }
 .form-cont{
@@ -51,7 +47,7 @@ form{
     padding: 0 20px;
     color: white;
     letter-spacing: 2px;
-    font-size: 21px;
+    font-size: 14px;
     border: none;
 }
 .form-cont button{
