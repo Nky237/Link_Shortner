@@ -1,3 +1,4 @@
+let currentDate;
 
 const selectElement = (selector) => {
     const element = document.querySelector(selector);
@@ -12,6 +13,7 @@ const selectElement = (selector) => {
   const result = selectElement(".list"); 
   let mainContent = document.querySelector('main')
   let errorMsg = document.querySelector('.msg')
+  
   
   
   
@@ -43,10 +45,14 @@ const selectElement = (selector) => {
   try {
     const res = await fetch(`https://api.shrtco.de/v2/shorten?url=${url}`);
     const data = await res.json();
+    currentDate = new Date().toLocaleDateString(); // Update the value of currentDate
+  
     const newUrl = document.createElement("p");
     newUrl.classList.add("list-group");
     newUrl.innerHTML = ` 
+    <p>${url} </p>
    <p> ${data.result.short_link}</p>
+   <p>Generated on: ${currentDate}</p>
    <button class="btn-list" >Copy</button>
    <button class="btn-del" >Delete</button>
    `;
