@@ -25,7 +25,10 @@ nav{
     justify-content: space-between;
     height: 90px;
     padding: 20px 40px;
-    position: sticky;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
 }
 nav h1{
     color: red;
@@ -77,6 +80,7 @@ nav h1{
     margin: auto;
     min-height: 530px;
     padding-bottom: 40px;
+    padding-top: 120px;
 }
 .wrap h1{
     font-size: 58px;
@@ -180,7 +184,7 @@ main img{
 .tex{
     width: 60%;
 }
-#loadMoreBtn{
+.loady{
     color: #1A686A;
     cursor: pointer;
     font-weight: 600;
@@ -189,6 +193,9 @@ main img{
 .tes, .about{
     padding: 50px 40px;
 }
+/* .tes{
+    position: relative;
+} */
 .tes h1{
     text-align: center;
     font-size: 40px;
@@ -203,6 +210,10 @@ main img{
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 
 }
+.pagy div{
+    font-weight: 700;
+}
+
 /*  */
 .log h1{
     text-align: center;
@@ -212,6 +223,7 @@ main img{
     display: flex;
     justify-content: space-between;
     padding: 50px;
+    flex-wrap: wrap;
 }
 .logo img:hover{
     transform: scale(1.5);
@@ -254,10 +266,14 @@ footer .icon-tab i{
     font-size: 24px;
 }
 footer .icon-tab select{
-    color: #737373;
-    font-size: 24px;
+    font-size: 14px;
+    background: transparent;
+    color: white;
+    border: none;
 }
-
+footer .icon-tab select option{
+    background-color: #0A0A24;
+}
 @media only screen and (max-width: 700px){
     .wrap h1{
         font-weight: 900;
@@ -269,9 +285,31 @@ footer .icon-tab select{
     flex-direction: column;
     margin-top: 70px;
 }
-.lottie{
+.lottie {
     width: 100%;
-    float: left;
-    height: 400px;
+    grid-template-columns: 150px 150px;
+    margin-top: 30px;
+}
+.about .text{
+    width: 100%;
+}
+.about .flexy{
+flex-direction: column;
+}
+.lott, .tex{
+    width: 90%;
+    margin-top: 30px;
+}
+.logo{
+    padding-bottom: 40px;
+}
+.swiper-slide{
+    margin: 0;
+}
+.logo img{
+    padding-top: 30px;
+}
+footer main{
+    flex-direction: column;
 }
 }

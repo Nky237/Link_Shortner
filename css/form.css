@@ -115,8 +115,13 @@ footer .icon-tab i{
     font-size: 24px;
 }
 footer .icon-tab select{
-    color: #737373;
-    font-size: 24px;
+    font-size: 14px;
+    background: transparent;
+    color: white;
+    border: none;
+}
+footer .icon-tab select option{
+    background-color: #0A0A24;
 }
 @media only screen and (max-width: 600px){
     form{
