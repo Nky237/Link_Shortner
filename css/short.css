@@ -149,3 +149,23 @@ input {
   background-color: rgb(229, 165, 165);
 }
 /* ==========END========= */
+@media only screen and (max-width: 500px){
+  .list{
+    width: 100%;
+  }
+  .list .list-group{
+    overflow-x: auto;
+    background-color: white;
+  }
+  .list-group small{
+    display: none;
+  }
+ .list-group p{
+  margin: 0 20px;
+  width: 50%;
+ }
+ .list-group button{
+  margin: 0 20px;
+  
+ }
+}
