@@ -82,7 +82,7 @@ nav h1{
     color: #010E1B;
 }
 
-/*  */
+/* HERO SECTION */
 .wrap{
     display: flex;
     justify-content: space-between;
@@ -95,12 +95,12 @@ nav h1{
     padding-top: 120px;
 }
 .wrap h1{
-    font-size: 58px;
+    font-size: 44px;
     font-weight: 700;
 }
 .wrap p{
-    font-size: 22px;
-    line-height: 35px;
+    font-size: 20px;
+    line-height: 33px;
 }
 main img{
     height: 50px;
@@ -174,7 +174,7 @@ main img{
     color: red;
 }
 
-/*  */
+/* ABOUT */
 .about .text{
     text-align: center;
     line-height: 40px;
@@ -201,13 +201,10 @@ main img{
     cursor: pointer;
     font-weight: 600;
 }
-/*  */
+/* TESTIMONIAL */
 .tes, .about{
     padding: 50px 40px;
 }
-/* .tes{
-    position: relative;
-} */
 .tes h1{
     text-align: center;
     font-size: 40px;
@@ -217,9 +214,12 @@ main img{
 }
 .swiper-slide{
     min-height: 200px !important;
-    border: 1px solid black;
+    border: 1px solid #F5820E;
     display: flex;
     text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    padding: 10px;
+    margin-left: 15px;
     /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
 
 }

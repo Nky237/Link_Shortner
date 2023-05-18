@@ -11,7 +11,7 @@ body {
     rgba(26, 29, 73, 1) 53%,
     rgba(26, 104, 106, 1) 100%
   );
-  min-height: 100vh;
+  min-height: 400px;
 }
 a{
   text-decoration: none;
@@ -277,12 +277,7 @@ footer .icon-tab select{
 footer .icon-tab select option{
   background-color: #0A0A24;
 }
-@media only screen and (max-width: 740px){
-  
- body{
-  min-height: 600px;
-  overflow: visible !important;
- }
+@media only screen and (max-width: 760px){
  .list{
   height: 400px;
   overflow: auto;
@@ -355,6 +350,7 @@ footer main{
     margin: auto;
     padding: 3% 6%;
     height: 200px;
+    width: 100%;
   }
   .input-field-container button{
     background-color:hsl(180, 66%, 49%);
@@ -365,17 +361,31 @@ footer main{
 .input-field-container{
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     height:auto;
+    margin: 0 !important;
   
 }
 .input-field-container input{
     border-radius:5px;
     margin-bottom:5%;
+    margin-left: 0;
     margin-top: 50px;
+    height: 60px;
+    width: 350px;
 }
 .input-field-container button {
   margin: 0;
+  height: 60px;
+  width: 350px;
 }
 
+}
+@media only screen and (max-width: 300px){
+  .input-field-container input{
+    width: 200px;
+}
+.input-field-container button {
+  width: 200px;
+}
 }
