@@ -188,6 +188,12 @@ input {
 
 }
 @media only screen and (max-width: 450px){
+  
+  .shorten-link-container {
+    margin: auto;
+    padding: 3% 6%;
+    height: 200px;
+  }
   .input-field-container button{
     background-color:hsl(180, 66%, 49%);
     padding:3% 6%;
@@ -199,10 +205,12 @@ input {
     justify-content: space-around;
     align-items: center;
     height:auto;
+  
 }
 .input-field-container input{
     border-radius:5px;
     margin-bottom:5%;
+    margin-top: 50px;
 }
 .input-field-container button {
   margin: 0;

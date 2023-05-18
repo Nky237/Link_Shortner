@@ -126,8 +126,8 @@ footer .icon-tab select option{
 }
 @media only screen and (max-width: 600px){
     form{
-        width: 92%;
-        margin-top: 10px;
+        width: 98%;
+        margin: 20px auto;
     }
     .logo img{
         width: 120px;
