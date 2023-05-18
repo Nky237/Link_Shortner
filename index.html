@@ -14,13 +14,15 @@
     />
     <!-- CSS -->
     <link rel="stylesheet" href="./css/index.css">
-    <title>Document</title>
-    <!-- SWIPER -->
+    <title>Shrtit</title>
      <!-- Link Swiper's CSS -->
   <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
 />
+<!-- AOS ANIMATION -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
   </head>
   <body>
     <div class="wrapper">
@@ -71,17 +73,17 @@
     </div>
 
     <section class="about">
-       <div class="text">
+       <div class="text" data-aos="fade-right">
         <p>Create perfect attribution, measure every touch, and monitor for accuracy.</p>
         <h1>The Link of Record</h1>
         <p>BL.INK creates an environment to manage every touch, monitor for accuracy, and provide analytical insights to measure value and performance.
         </p>
        </div>
        <div class="flexy">
-          <div>
+          <div data-aos="fade-right">
             <lottie-player src="./images/118043-data-analytics-techniques.json" class="lott" background="transparent"  speed="1"  loop  autoplay></lottie-player>
           </div>
-          <div class="tex">
+          <div class="tex" data-aos="zoom-in-up">
             <h1>About</h1>
               <div id="initialContent">
                 <p>BL.INK amplifies your social value by delivering greater control, increased flexibility, and safeguarding your data analytics. Customers rely on BL.INK to increase the impact of their social engagements.</p>
@@ -98,7 +100,7 @@
 
     <section class="about">
        <div class="flexy">
-          <div class="tex">
+          <div class="tex" data-aos="fade-up-right">
             <h1>Category</h1>
               <div id="section2Container">
                 <p>BL.INK amplifies your social value by delivering greater control, increased flexibility, and safeguarding your data analytics. Customers rely on BL.INK to increase the impact of their social engagements.</p>
@@ -109,7 +111,7 @@
               </div>
               <label id="loadMoreBtn2" class="loady">Load More ......</label>
           </div>
-          <div>
+          <div data-aos="zoom-in">
             <lottie-player src="./images/22756-link.json" class="lott" background="transparent"  speed="1"  loop  autoplay></lottie-player>
           </div>
        </div>
@@ -129,9 +131,11 @@
   </section>
 
   <section class="tes">
+    <div data-aos="fade-up-right">  
     <h1>Trusted By Thousands</h1>
     <p>Our customers create hundreds of millions of links - and every one is important.  You will find BL.INK links on grocery shelves, mobile devices, table tops, ad platforms, mailers, social networks, and messaging platforms around the world.  No matter your audience,
  BL.INK connects.</p>
+    </div>
 
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
@@ -247,6 +251,16 @@
           },
         });
       </script>
+
+      <!-- AOS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+  offset: 120, // offset (in px) from the original trigger point
+  duration: 1000, // values from 0 to 3000, with step 50ms
+  
+});
+  </script>
       <script src="./js/index.js"></script>
   </body>
 </html>

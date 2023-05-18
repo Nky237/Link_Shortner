@@ -323,7 +323,7 @@ footer main{
 @media only screen and (max-width: 450px){
     .lottie {
         width: 100%;
-        grid-template-columns: 160px 160px;
+        grid-template-columns: 180px 180px;
         margin-top: 30px;
     }
     .wrap h1{
