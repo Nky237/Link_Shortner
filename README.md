@@ -1,43 +1,5 @@
 # Link Shortener Website
 
-The Link Shortener Website is a web application that allows users to shorten long URLs into shorter, more manageable links. It helps 
-reduce the number of characters in a URL, making it easier to share on platforms with character limits.
-
-## Table of Contents
-
-- Features: (#features)
-- Installation: (#installation)
-- Usage: (#usage)
-- Dependencies: (#dependencies)
-- Technologies: (#technologies)
-- Contributing: (#contributing)
-- License: (#license)
-
-## Features
-
-- User authentication: Users are required to sign in to access the link shortening functionality.
-- Link Shortening: Users can enter a long URL and generate a shortened URL.
-- Copy to Clipboard: Users can easily copy the shortened URL to the clipboard with a single click.
-- History: The application stores the shortened URLs and their original counterparts for future reference.
-- Responsive Design: The website is optimized for various screen sizes and devices.
-- Delete Function: Users can delete shortened link
-
-## Installation
-
-1. Clone the repository:
-
-   ```shell
-   git clone https://github.com/your-username/link-shortener.git
-2. cd link-shortener
-3. Open in your browser with live server
-
-
-Sure! Here's an example of an extensive README file for your website project:
-
-markdown
-Copy code
-# Link Shortener Website
-
 The Link Shortener Website is a web application that allows users to shorten long URLs into shorter, more manageable links. It helps reduce the number of characters in a URL, making it easier to share on platforms with character limits.
 
 ## Table of Contents
@@ -81,14 +43,16 @@ Usage
 
 7. You can delete a url that is not needed
 
-Dependencies
+Dependencies: 
+
 The Link Shortener Website uses the following dependencies:
 
 AOS (Animate On Scroll): Library for animating elements on scroll.
 Swiper JS: Library for creating responsive, touch-enabled sliders and carousels.
 These dependencies are included in the project using a link and a script tag.
 
-Technologies
+Technologies:
+
 The Link Shortener Website is built using the following technologies:
 
 HTML: Markup language for creating the structure of web pages.
