@@ -71,6 +71,18 @@ nav h1{
     border: 1px solid #615AB4;
 }
 
+/* HARMBURGER */
+.harmburger{
+    display: none;
+    cursor: pointer;
+}
+.harmburger i{
+    -webkit-transition: all 0.3s ease-in-out ;
+    transition: all 0.9s ease-in-out;
+    color: #010E1B;
+}
+
+/*  */
 .wrap{
     display: flex;
     justify-content: space-between;
@@ -316,16 +328,59 @@ footer main{
 }
 }
 @media only screen and (max-width : 540px){
+    
+    /* NAV */
+    .harmburger{
+        display: block;
+    }
+    .harmburger i{
+        font-size: 30px;
+        color: white;
+    }
+    .btn{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #010E1B;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        height: 100px;
+        color: white;
+        
+        
+    
+    }
+    .btn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn button{
+        margin: 10px 0;
+    }
+    
+    
+    .btn.active{
+        left: 0;
+    
+    }
+
+    /*  */
     .lottie {
         width: 100%;
         grid-template-columns: 230px 230px;
         margin-top: 30px;
     }
+
+    
 }
 @media only screen and (max-width: 450px){
     .lottie {
         width: 100%;
-        grid-template-columns: 180px 180px;
+        grid-template-columns: 160px 160px;
         margin-top: 30px;
     }
     .wrap h1{

@@ -37,3 +37,19 @@
   // Attach event listener to the "Load More" button for section 2
   var loadMoreBtn2 = document.getElementById('loadMoreBtn2');
   loadMoreBtn2.addEventListener('click', loadMoreSection2);
+
+
+
+  // RESPONSIVE NAV MENU
+const Navy = document.querySelector('.btn')
+const Ham = document.querySelector('.harmburger')
+const Linky = document.querySelectorAll('.nav-link')
+
+	Ham.addEventListener("click", ()=>{
+	Navy.classList.toggle("active")
+	Ham.classList.toggle("active")
+})
+Linky.forEach(n=> n.addEventListener('click', ()=>{
+	Navy.classList.remove("active")
+	Ham.classList.remove("active")
+}))
