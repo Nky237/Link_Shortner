@@ -310,6 +310,9 @@ footer main{
 }
 @media only screen and (max-width: 500px){
    /* NAV */
+   nav{
+    height: 70px;
+   }
    .harmburger{
     display: block;
 }

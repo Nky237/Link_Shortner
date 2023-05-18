@@ -216,14 +216,29 @@ main img{
     margin-top: 50px;
 }
 .swiper-slide{
-    height: 200px !important;
-    margin-left: 20px;
-    padding: 0 20px;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    min-height: 200px !important;
+    border: 1px solid black;
+    display: flex;
+    text-align: center;
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
 
+}
+.swiper-slide p, .swiper-slide h3{
+    font-size: 14px;
+    margin: 7px 0;
+}
+.swiper-slide h1{
+    font-size: 20px;
 }
 .pagy div{
     font-weight: 700;
+}
+.pagy{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
 }
 
 /*  */
@@ -330,6 +345,9 @@ footer main{
 @media only screen and (max-width : 540px){
     
     /* NAV */
+    nav{
+        height: 70px;
+       }
     .harmburger{
         display: block;
     }

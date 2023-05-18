@@ -42,21 +42,28 @@ function addShortenedUrl(url, shortLink, generatedOn) {
   result.prepend(newUrl);
 }
 
-// Copy-Button Interaction
-result.addEventListener("click", (e) => {
+// Copy and Delete-Button Interaction
+
+result.addEventListener("click", async (e) => {
+  
   if (e.target.classList.contains("btn-list")) {
     const copyBtn = e.target;
-    const shortLink = copyBtn.previousSibling.textContent.trim();
-    navigator.clipboard.writeText(shortLink);
-    copyBtn.style.backgroundColor = "rgb(61, 3, 95)";
-    copyBtn.innerHTML = "Copied!";
+    const shortLink = copyBtn.previousElementSibling.previousElementSibling.textContent.trim();
+    try {
+      await navigator.clipboard.writeText(shortLink);
+      copyBtn.style.backgroundColor = "rgb(61, 3, 95)";
+      copyBtn.innerHTML = "Copied!";
 
-    // Revert to normal
-    setTimeout(() => {
-      copyBtn.style.backgroundColor = "";
-      copyBtn.innerHTML = "Copy";
-    }, 1000);
-  } else if (e.target.classList.contains("btn-del")) {
+      // Revert to normal
+      setTimeout(() => {
+        copyBtn.style.backgroundColor = "";
+        copyBtn.innerHTML = "Copy";
+      }, 1000);
+    } catch (err) {
+      console.log("Copy to clipboard failed:", err);
+    }
+  }
+  else if (e.target.classList.contains("btn-del")) {
     const deleteBtn = e.target;
     const listItem = deleteBtn.parentElement;
     listItem.style.display = "none";
@@ -68,6 +75,10 @@ result.addEventListener("click", (e) => {
     localStorage.setItem("itemList", JSON.stringify(updatedItemList));
   }
 });
+
+
+
+
 
 // SHORTENING
 form.addEventListener("submit", async (e) => {
