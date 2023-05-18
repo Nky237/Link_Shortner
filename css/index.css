@@ -7,6 +7,9 @@
 }
 a{
     text-decoration: none;
+    
+}
+button{
     cursor: pointer;
 }
 
@@ -56,7 +59,7 @@ nav h1{
 }
 .btn button:hover{
     background: none;
-    color: #615AB4;
+    color: #00A7CA;
 }
 .btn .but a:hover{
     color: #615AB4;   
@@ -78,7 +81,6 @@ nav h1{
 .harmburger i{
     -webkit-transition: all 0.3s ease-in-out ;
     transition: all 0.9s ease-in-out;
-    color: #010E1B;
 }
 
 /* HERO SECTION */
@@ -121,9 +123,12 @@ main img{
 }
 .wrap button a:hover{
     color: #00A7CA;
+
 }
 .wrap button:hover{
     background: none;
+    color: #00A7CA;
+
    
 }
 
@@ -240,7 +245,7 @@ main img{
     margin-top: 90px;
 }
 
-/*  */
+/* SPONSORS */
 .log h1{
     text-align: center;
     padding-top: 40px;
@@ -354,6 +359,7 @@ footer main{
         font-size: 30px;
         color: white;
     }
+
     .btn{
         position: fixed;
         left: -100%;
@@ -364,7 +370,7 @@ footer main{
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        height: 100px;
+        min-height: 100px;
         color: white;
         
         
@@ -375,7 +381,7 @@ footer main{
         flex-direction: column;
         align-items: center;
     }
-    .btn button{
+    .btn a{
         margin: 10px 0;
     }
     
