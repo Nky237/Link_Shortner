@@ -6,38 +6,77 @@ const selectElement = (selector) => {
   throw new Error(`Cannot find the element ${selector}`);
 };
 
-// Select Items
+// Select Items using DOM manipulation
 const form = selectElement("form");
 const input = selectElement("input");
-const result = selectElement(".list"); 
-let mainContent = document.querySelector('main')
-let errorMsg = document.querySelector('.msg')
+const result = selectElement(".list");
+let errorMsg = selectElement('.msg');
+const loader = selectElement('.loader'); // Selecting the loader element
 
 // Restore stored items from local storage on page load
 document.addEventListener('DOMContentLoaded', () => {
   const storedItems = JSON.parse(localStorage.getItem("itemList")) || [];
   storedItems.forEach((item) => {
-    const newUrl = document.createElement("p");
-    newUrl.classList.add("list-group");
-    newUrl.innerHTML = ` 
-      <small>${item.url}</small>
-      <p>${item.shortLink}</p>
-      <p>Generated on: ${item.generatedOn}</p>
-      <button class="btn-list">Copy</button>
-      <button class="btn-del">Delete</button>
-    `;
+    const newUrl = createShortenedUrlElement(item.url, item.shortLink, item.generatedOn);
     result.prepend(newUrl);
   });
 });
 
+// Create a new shortened URL element
+function createShortenedUrlElement(url, shortLink, generatedOn) {
+  const newUrl = document.createElement("div");
+  newUrl.classList.add("list-group");
+  newUrl.innerHTML = `
+    <p><strong>Original URL:</strong> ${url}</p>
+    <p><strong>Shortened URL:</strong> ${shortLink}</p>
+    <p><strong>Generated on:</strong> ${generatedOn}</p>
+    <button class="btn-list">Copy</button>
+    <button class="btn-del">Delete</button>
+  `;
+  return newUrl;
+}
+
+// Add a new shortened URL to the list
+function addShortenedUrl(url, shortLink, generatedOn) {
+  const newUrl = createShortenedUrlElement(url, shortLink, generatedOn);
+  result.prepend(newUrl);
+}
+
+// Copy-Button Interaction
+result.addEventListener("click", (e) => {
+  if (e.target.classList.contains("btn-list")) {
+    const copyBtn = e.target;
+    const shortLink = copyBtn.previousSibling.textContent.trim();
+    navigator.clipboard.writeText(shortLink);
+    copyBtn.style.backgroundColor = "rgb(61, 3, 95)";
+    copyBtn.innerHTML = "Copied!";
+
+    // Revert to normal
+    setTimeout(() => {
+      copyBtn.style.backgroundColor = "";
+      copyBtn.innerHTML = "Copy";
+    }, 1000);
+  } else if (e.target.classList.contains("btn-del")) {
+    const deleteBtn = e.target;
+    const listItem = deleteBtn.parentElement;
+    listItem.style.display = "none";
+
+    // Remove item from local storage
+    const url = listItem.querySelector("p:first-child").textContent.split(":")[1].trim();
+    const itemList = JSON.parse(localStorage.getItem("itemList")) || [];
+    const updatedItemList = itemList.filter((item) => item.url !== url);
+    localStorage.setItem("itemList", JSON.stringify(updatedItemList));
+  }
+});
+
 // SHORTENING
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
   if (input.value === '') {
     // Error Message
     errorMsg.innerHTML = 'Please add a link';
     input.style.border = '1px solid rgb(250, 70, 70)';
-    
+
     // Revert to normal
     setTimeout(() => {
       errorMsg.innerHTML = '';
@@ -45,54 +84,20 @@ form.addEventListener("submit", (e) => {
     }, 2000);
   } else {
     const url = input.value;
-    shortenUrl(url);
+    await shortenUrl(url);
+    input.value = '';
   }
 });
 
 // Fetch API
 async function shortenUrl(url) {
   try {
+    loader.style.display = 'block';
     const res = await fetch(`https://api.shrtco.de/v2/shorten?url=${url}`);
     const data = await res.json();
     currentDate = new Date().toLocaleDateString(); // Update the value of currentDate
 
-    const newUrl = document.createElement("p");
-    newUrl.classList.add("list-group");
-    newUrl.innerHTML = ` 
-      <small>${url}</small>
-      <p>${data.result.short_link}</p>
-      <p>Generated on: ${currentDate}</p>
-      <button class="btn-list">Copy</button>
-      <button class="btn-del">Delete</button>
-    `;
-    result.prepend(newUrl);
-
-    // Copy-Button Interaction
-    const copyBtn = result.querySelector(".btn-list");
-    const delBtn = result.querySelector(".btn-del");
-
-    copyBtn.addEventListener("click", (e) => {
-      if (e.target.classList.contains("btn-list")) {
-        navigator.clipboard.writeText(copyBtn.previousElementSibling.textContent);
-        let btn = e.target;
-        btn.style.backgroundColor = "rgb(61, 3, 95)";
-        btn.innerHTML = "Copied!";
-
-        // Revert to normal
-        setTimeout(() => {
-          btn.style.backgroundColor = "";
-          btn.innerHTML = "Copy";
-        }, 1000);
-      }
-    });
-
-    delBtn.addEventListener("click", (e) => {
-      if (e.target.classList.contains("btn-del")) {
-        newUrl.style.display = "none";
-      }
-    });
-
-    input.value = "";
+    addShortenedUrl(url, data.result.short_link, currentDate);
 
     // Store item in local storage
     const itemList = JSON.parse(localStorage.getItem("itemList")) || [];
@@ -102,7 +107,10 @@ async function shortenUrl(url) {
       generatedOn: currentDate,
     });
     localStorage.setItem("itemList", JSON.stringify(itemList));
+
+    loader.style.display = 'none'; // Hide the loader after data is fetched
   } catch (err) {
+    loader.style.display = 'none'; // Hide the loader in case of error
     console.log(err);
   }
 }
