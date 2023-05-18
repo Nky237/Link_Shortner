@@ -274,7 +274,7 @@ footer .icon-tab select{
 footer .icon-tab select option{
     background-color: #0A0A24;
 }
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 768px){
     .wrap h1{
         font-weight: 900;
         font-size: 60px;
@@ -287,7 +287,7 @@ footer .icon-tab select option{
 }
 .lottie {
     width: 100%;
-    grid-template-columns: 150px 150px;
+    grid-template-columns: 320px 320px;
     margin-top: 30px;
 }
 .about .text{
@@ -312,4 +312,51 @@ flex-direction: column;
 footer main{
     flex-direction: column;
 }
+}
+@media only screen and (max-width : 540px){
+    .lottie {
+        width: 100%;
+        grid-template-columns: 230px 230px;
+        margin-top: 30px;
+    }
+}
+@media only screen and (max-width: 412px){
+    .lottie {
+        width: 100%;
+        grid-template-columns: 160px 160px;
+        margin-top: 30px;
+    }
+    .wrap h1{
+        font-size: 35px;
+        line-height: 50px;
+        
+    }
+    .wrap p{
+        font-size: 16px;
+    }
+    .lottie div p{
+        font-size: 13px;
+    }
+    .tes, .about{
+        padding: 50px 10px;
+    }
+    .about .text h1{
+        padding: 10px 0;
+        line-height: 40px;
+    }
+    .about .text{
+        line-height: 30px;
+        
+    }
+    .logo{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 300px){
+    .lottie {
+        width: 100%;
+        grid-template-columns: 110px 110px;
+        margin-top: 30px;
+    }
 }
