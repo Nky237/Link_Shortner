@@ -320,7 +320,7 @@ footer main{
         margin-top: 30px;
     }
 }
-@media only screen and (max-width: 412px){
+@media only screen and (max-width: 450px){
     .lottie {
         width: 100%;
         grid-template-columns: 160px 160px;
@@ -353,7 +353,7 @@ footer main{
     }
 }
 
-@media only screen and (max-width: 300px){
+@media only screen and (max-width: 360px){
     .lottie {
         width: 100%;
         grid-template-columns: 110px 110px;
